@@ -10,3 +10,8 @@ ProcexpHelper::~ProcexpHelper()
 {
 
 }
+
+QString ProcexpHelper::ping()
+{
+    return "pong";
+}

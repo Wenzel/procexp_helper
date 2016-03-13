@@ -19,6 +19,8 @@ signals:
     void gid(int process_pid, int process_tgid, int rgid, int egid);
     void exit(int process_pid, int process_tgid, int exit_code);
 
+public slots:
+    QString ping();
 };
 
 #endif // PROCEXPHELPER_H

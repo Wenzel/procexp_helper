@@ -57,11 +57,19 @@ qt5_add_dbus_interface(HELPER_SRC_DBUS
 add_executable(server
     server.cpp
     procexphelper.cpp
+    toto.cpp
+    ${HELPER_SRC_DBUS}
+)
+
+add_executable(client
+    client.cpp
+    toto.cpp
+    procexphelper.cpp
     ${HELPER_SRC_DBUS}
 )
 
 target_link_libraries(server Qt5::Core Qt5::DBus)
-
+target_link_libraries(client Qt5::Core Qt5::DBus)
 
 # include(uninstall)
 # add_subdirectory("${CMAKE_SOURCE_DIR}/cmake/cpack") # enable packaging with CPack
